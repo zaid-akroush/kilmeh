@@ -28,7 +28,7 @@ Decided 2026-11-21: one dialect, Jordanian (`levantine`, plus Jordanian Arabizi)
 - [x] Parity table: English vs Jordanian vs Arabizi for every Track A task, 3 tries (PR #89).
 - [x] Write-up with real failure examples, which fixed what it may claim before results were read: `results/v1-run-2026-11.md` (PR #89).
 - [x] Second local model checked (Ornith 9B); no clear difference, Qwen stays the reference (PR #89).
-- [ ] Clean public repository `kilmeh/kilmeh` holds the v1.0 snapshot.
+- [ ] Clean public repository `zaid-akroush/kilmeh` holds the v1.0 snapshot.
 - [ ] **(board)** Repository public, tag `v1.0.0`.
 - **Done when:** a stranger can clone the public repo, rerun one task, and read the write-up.
 

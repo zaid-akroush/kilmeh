@@ -29,7 +29,7 @@ Kilmeh ("word" in Arabic) is an open benchmark for coding agents such as Claude 
 
 Status: v1.0. First results on a small local model: [`results/v1-run-2026-11.md`](../results/v1-run-2026-11.md). See [`ROADMAP.md`](ROADMAP.md).
 
-- Repository: https://github.com/kilmeh/kilmeh
+- Repository: https://github.com/zaid-akroush/kilmeh
 - Version: `v1.0.0` (per-task versions are in [`tasks/CHANGELOG.md`](../tasks/CHANGELOG.md))
 - Leaderboard: none. Results pages for each run are in [`results/`](../results/).
 
@@ -89,7 +89,7 @@ Not on Hugging Face yet. When it is, the layout follows `kilmeh export-harbor`: 
 
 ## Review process
 
-Every prompt variant carries a `review_status`. A variant starts as `draft`, becomes `native_authored` when a native speaker wrote it, and `native_reviewed` after a second native speaker checks it. Each change is logged in the task's `REVIEW.md`. Releases require `uv run kilmeh validate-tasks --strict tasks`, which rejects every draft. Details: [`tasks/REVIEW_PROCESS.md`](../tasks/REVIEW_PROCESS.md).
+Every prompt variant carries a `review_status`. A variant starts as `draft`, becomes `native_authored` when a native speaker wrote it, and `native_reviewed` after a second native speaker checks it. Each change is logged in the task's `REVIEW.md`. Releases require `uv run kilmeh validate-tasks --strict tasks`, which rejects every draft. **v1.0 exception (maintainer decision, 2026-11-22):** v1.0 ships before the full native review, so it does not pass `--strict`. Prompts still marked `draft` stay labelled `draft`. `kilmeh export-harbor` skips draft Arabic prompts, so no draft Arabic text was run in v1.0. `--strict` is required from v1.1. Details: [`tasks/REVIEW_PROCESS.md`](../tasks/REVIEW_PROCESS.md).
 
 ## Licensing
 
@@ -120,10 +120,10 @@ Every prompt variant carries a `review_status`. A variant starts as `draft`, bec
   title  = {Kilmeh: a benchmark for coding agents on Arabic},
   author = {Akroush, Zaid},
   year   = {2026},
-  url    = {https://github.com/kilmeh/kilmeh}
+  url    = {https://github.com/zaid-akroush/kilmeh}
 }
 ```
 
 ## Contact
 
-Open an issue at https://github.com/kilmeh/kilmeh/issues.
+Open an issue at https://github.com/zaid-akroush/kilmeh/issues.
