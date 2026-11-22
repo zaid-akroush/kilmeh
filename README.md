@@ -92,7 +92,7 @@ Each task is a folder with `task.toml`, prompt variants, a fixture, a Dockerfile
 
 ## Development
 
-Needs Python 3.12 and [`uv`](https://docs.astral.sh/uv/). Docker is needed only to run a task's grader in its container.
+Needs Python 3.12 and [`uv`](https://docs.astral.sh/uv/). Docker is needed to run tasks and graders in their containers.
 
 ```
 uv sync
@@ -113,7 +113,7 @@ uv run kilmeh export-harbor out tasks/b-arabic-in-code/arabic-file-io
 uvx --from harbor==0.25.0 harbor run -p out/arabic-file-io--en -a oracle
 ```
 
-On Windows, set `PYTHONUTF8=1` first, or Harbor fails to read tasks that hold Arabic text.
+On Windows, set `PYTHONUTF8=1` first, or Harbor fails to read tasks that hold Arabic text. The full `pytest` suite expects Linux (CI runs it there). On Windows, many tests fail for environment reasons only: `bash` resolving to WSL, symlinks needing admin rights, and CRLF checkouts.
 
 Swap `-a oracle` for a real agent (for example `-a codex` with a local Ollama model) to test it. Read the run with `uv run kilmeh summarize-run jobs`.
 
