@@ -1,0 +1,10 @@
+# Graphify: leave agent tooling and generated output out of the knowledge graph
+.loom/
+.claude/
+.openidea/
+scripts/
+.github/workflows/verify-deploy.yml
+.github/banner.png
+floorplan/
+graphify-out/
+scratchpad/

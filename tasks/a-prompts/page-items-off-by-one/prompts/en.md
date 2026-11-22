@@ -1,0 +1,1 @@
+The function get_page in paging.py gives the wrong items. Pages start at 1, so get_page(items, 1, 10) should give the first 10 items, but it skips them. Fix it. Keep the name and the arguments the same.

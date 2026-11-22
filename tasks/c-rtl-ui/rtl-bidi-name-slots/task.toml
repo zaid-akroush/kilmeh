@@ -1,0 +1,32 @@
+schema_version = "1"
+id = "rtl-bidi-name-slots"
+version = "0.1.0"
+track = "c-rtl-ui"
+title = "Isolate user and product names inside Arabic sentence templates"
+difficulty = "easy"
+split = "public"
+pair_id = "rtl-bidi-name-slots"
+stack = ["html", "css"]
+
+# en is a short AI draft; the full requirements are in fixture/SPEC.md. levantine is a placeholder: the board writes it (see REVIEW.md).
+[prompts.en]
+file = "prompts/en.md"
+lang = "en"
+kind = "en"
+review_status = "draft"
+
+[prompts.levantine]
+file = "prompts/levantine.md"
+lang = "ar"
+kind = "dialect"
+dialect = "levantine"
+review_status = "draft"
+
+[grader]
+type = "rtl"
+entry = "tests/test.sh"
+timeout_seconds = 180
+
+[solutions]
+reference = "solutions/reference"
+known_bad = "solutions/known-bad"

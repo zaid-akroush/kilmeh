@@ -1,0 +1,3 @@
+tasks/** -text
+data/arabizi/** -text
+tests/fixtures/** -text

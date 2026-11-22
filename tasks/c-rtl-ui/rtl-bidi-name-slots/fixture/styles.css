@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.panel {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.notes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notes li {
+  margin-block-end: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.slot {
+  font-weight: bold;
+}

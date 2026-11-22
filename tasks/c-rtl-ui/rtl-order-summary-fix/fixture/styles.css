@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+
+main,
+.top {
+  padding: 16px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.summary {
+  width: 420px;
+  border-collapse: collapse;
+  margin-block: 16px;
+}
+
+.summary th,
+.summary td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: start;
+}
+
+.contact label {
+  display: block;
+  margin-block-end: 12px;
+}
+
+.contact input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 8px 16px;
+}

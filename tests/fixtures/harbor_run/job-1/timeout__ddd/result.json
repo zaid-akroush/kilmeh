@@ -1,0 +1,18 @@
+{
+ "task_name": "kilmeh/demo--en",
+ "trial_name": "timeout__ddd",
+ "agent_info": {
+  "name": "codex",
+  "version": "1",
+  "model_info": {
+   "name": "m1"
+  }
+ },
+ "agent_result": null,
+ "exception_info": {
+  "exception_type": "AgentTimeoutError",
+  "exception_message": "x"
+ },
+ "started_at": "2026-11-13T21:45:00.000000Z",
+ "finished_at": "2026-11-13T21:55:00.500000Z"
+}

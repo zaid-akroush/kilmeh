@@ -1,0 +1,20 @@
+{
+ "task_name": "kilmeh/demo--en",
+ "trial_name": "pass-tokens__aaa",
+ "agent_info": {
+  "name": "codex",
+  "version": "1",
+  "model_info": {
+   "name": "m1"
+  }
+ },
+ "agent_result": {
+  "n_input_tokens": 1000,
+  "n_cache_tokens": 800,
+  "n_output_tokens": 50,
+  "cost_usd": 0.5
+ },
+ "exception_info": null,
+ "started_at": "2026-11-13T21:45:00.000000Z",
+ "finished_at": "2026-11-13T21:46:01.500000Z"
+}

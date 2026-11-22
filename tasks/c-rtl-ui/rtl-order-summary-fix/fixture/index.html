@@ -1,0 +1,74 @@
+<!doctype html>
+<html dir="rtl" lang="ar-JO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ملخص الطلب</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <svg class="icon icon-logo" data-testid="logo-icon" width="32" height="32" viewBox="0 0 32 32" aria-label="logo">
+      <circle cx="9" cy="16" r="7" fill="#0b5"/>
+      <g data-part="head"><polygon points="18,8 30,16 18,24" fill="#0b5"/></g>
+    </svg>
+    <h1>ملخص الطلب</h1>
+  </header>
+
+  <main>
+    <section class="messages">
+      <p>تم استلام طلبك رقم <span data-testid="inv">INV-2026-0042</span>.</p>
+      <p>سنتواصل معك على الرقم <span data-testid="phone">+962 7 9123 4567</span>.</p>
+      <p>تم إنشاء الطلب بواسطة الحساب <span data-testid="user">sara_dev</span>.</p>
+      <p>المبلغ الإجمالي المطلوب هو <span data-testid="price">12.500 JOD</span>.</p>
+    </section>
+
+    <table class="summary">
+      <thead>
+        <tr><th>المنتج</th><th>الكمية</th><th>السعر</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>قهوة عربية</td><td>2</td><td>5.000</td></tr>
+        <tr><td>كتاب</td><td>1</td><td>7.500</td></tr>
+      </tbody>
+    </table>
+
+    <p class="media">
+      <svg class="icon icon-media" data-testid="play-icon" width="24" height="24" viewBox="0 0 24 24" aria-label="play">
+        <rect x="2" y="4" width="4" height="16" fill="currentColor"/>
+        <g data-part="head"><polygon points="10,4 22,12 10,20" fill="currentColor"/></g>
+      </svg>
+      شاهد الفيديو
+    </p>
+
+    <form class="contact">
+      <label>الاسم
+        <input data-testid="name" name="name" type="text" placeholder="سارة أحمد">
+      </label>
+      <label>البريد الإلكتروني
+        <input data-testid="email" name="email" type="email">
+      </label>
+      <label>رقم الهاتف
+        <input data-testid="phone-input" name="phone" type="text" inputmode="tel">
+      </label>
+    </form>
+
+    <div class="actions">
+      <button type="button" data-testid="back">
+        <svg class="icon icon-arrow" data-testid="back-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <line x1="6" y1="10" x2="18" y2="10" stroke="currentColor" stroke-width="2"/>
+          <g data-part="head"><polyline points="8,4 2,10 8,16" fill="none" stroke="currentColor" stroke-width="2"/></g>
+        </svg>
+        السابق
+      </button>
+      <button type="button" data-testid="next">
+        التالي
+        <svg class="icon icon-arrow" data-testid="next-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <line x1="2" y1="10" x2="14" y2="10" stroke="currentColor" stroke-width="2"/>
+          <g data-part="head"><polyline points="12,4 18,10 12,16" fill="none" stroke="currentColor" stroke-width="2"/></g>
+        </svg>
+      </button>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,1 @@
+The project in `/app` is a small JavaScript project, and `src/money.js` has an empty function `formatJOD`. Implement it so amounts in Jordanian dinars come out right. The requirements are in `SPEC.md`.

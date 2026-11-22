@@ -1,0 +1,1 @@
+In invoice.py the tax calculation is written twice. Move it into one function called add_tax(amount) that returns the amount plus 16% tax, rounded to 2 decimals, and make invoice_total and receipt_line both use it. The results must stay the same.

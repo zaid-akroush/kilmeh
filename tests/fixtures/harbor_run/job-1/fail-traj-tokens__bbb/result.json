@@ -1,0 +1,17 @@
+{
+ "task_name": "kilmeh/demo--levantine",
+ "trial_name": "fail-traj-tokens__bbb",
+ "agent_info": {
+  "name": "codex",
+  "version": "1",
+  "model_info": {
+   "name": "m1"
+  }
+ },
+ "agent_result": {
+  "n_input_tokens": null
+ },
+ "exception_info": null,
+ "started_at": "2026-11-13T21:45:00.000000Z",
+ "finished_at": "2026-11-13T21:46:00.500000Z"
+}

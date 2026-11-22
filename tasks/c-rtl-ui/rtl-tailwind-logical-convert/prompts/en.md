@@ -1,0 +1,1 @@
+This project has three Tailwind v4 pages that use classes like `ml-4` and `text-left`. Convert everything to logical utilities so it works in Arabic and still looks the same left to right. The requirements are in `SPEC.md`.

@@ -1,0 +1,1 @@
+el function get_page b paging.py btrja3 3anaser 3'alat. el pages btballesh men 1, ya3ni get_page(items, 1, 10) lazem trja3li awwal 10 3anaser, bas hi btnott-hom. sallha, w 5alli esmha wel arguments zay ma hom.

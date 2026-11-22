@@ -1,0 +1,1 @@
+b invoice.py 7isab el dareebe maktoob marrteen. 7otto b function wa7de esmha add_tax(amount) btrja3 el mablagh ma3 dareebe 16%, m2arrab la manzalteen 3ashriyyat, w 5alli invoice_total w receipt_line yesta3mloha hom el thnteen. el natayej lazem tdall nafsha.

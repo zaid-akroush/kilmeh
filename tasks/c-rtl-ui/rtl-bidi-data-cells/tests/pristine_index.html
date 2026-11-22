@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>معلومات النظام</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="panel">
+    <h1>معلومات النظام</h1>
+    <table class="info" data-testid="info">
+      <thead>
+        <tr><th>البند</th><th>القيمة</th></tr>
+      </thead>
+      <tbody>
+        <tr data-testid="r-path"><td class="label">ملف السجل</td><td class="value">يحفظ في <code data-testid="path">/var/log/app/error.log</code></td></tr>
+        <tr data-testid="r-version"><td class="label">الإصدار</td><td class="value">الإصدار الحالي <code data-testid="version">2.4.1 (build 77)</code></td></tr>
+        <tr data-testid="r-phone"><td class="label">الدعم</td><td class="value">اتصل على <span class="phone" data-testid="phone">+962 79 123 4567</span></td></tr>
+        <tr data-testid="r-code"><td class="label">ملاحظة</td><td class="value">استخدم <code data-testid="fn">getUser()</code> قبل الحفظ</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

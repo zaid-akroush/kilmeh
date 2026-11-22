@@ -1,0 +1,40 @@
+schema_version = "1"
+id = "format-price-currency"
+version = "0.1.0"
+track = "a-prompts"
+title = "Add an optional currency argument"
+difficulty = "easy"
+split = "public"
+pair_id = "format-price-currency"
+stack = ["python"]
+
+# en is an AI draft. levantine and arabizi_levantine: AI drafts approved by the board (native Jordanian speaker) 2026-11-21, see REVIEW.md.
+[prompts.en]
+file = "prompts/en.md"
+lang = "en"
+kind = "en"
+review_status = "draft"
+
+[prompts.arabizi_levantine]
+file = "prompts/arabizi_levantine.md"
+lang = "ar"
+kind = "dialect"
+dialect = "levantine"
+script = "latin"
+review_status = "native_reviewed"
+
+[prompts.levantine]
+file = "prompts/levantine.md"
+lang = "ar"
+kind = "dialect"
+dialect = "levantine"
+review_status = "native_reviewed"
+
+[grader]
+type = "tests"
+entry = "tests/test.sh"
+timeout_seconds = 120
+
+[solutions]
+reference = "solutions/reference"
+known_bad = "solutions/known-bad"

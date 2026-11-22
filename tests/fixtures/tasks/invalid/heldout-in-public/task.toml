@@ -1,0 +1,31 @@
+schema_version = "1"
+id = "heldout-in-public"
+version = "0.1.0"
+track = "b-arabic-in-code"
+title = "Add a function without altering Arabic bytes"
+difficulty = "easy"
+split = "heldout"
+pair_id = "arabic-in-code-farewell"
+stack = ["python"]
+
+# The MSA prompt is AI-written: it needs native-speaker review before release.
+[prompts.en]
+file = "prompts/en.md"
+lang = "en"
+kind = "en"
+review_status = "draft"
+
+[prompts.msa]
+file = "prompts/msa.md"
+lang = "ar"
+kind = "msa"
+review_status = "draft"
+
+[grader]
+type = "arabic-integrity"
+entry = "tests/test.sh"
+timeout_seconds = 120
+
+[solutions]
+reference = "solutions/reference"
+known_bad = "solutions/known-bad"

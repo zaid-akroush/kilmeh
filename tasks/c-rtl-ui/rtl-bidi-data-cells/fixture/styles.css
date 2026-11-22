@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.panel {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.info {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.info th,
+.info td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: start;
+}
+
+code {
+  font-family: monospace;
+  background: #f0f0f0;
+}

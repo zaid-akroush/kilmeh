@@ -1,0 +1,72 @@
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Loom local state (keep config.yml / stack.yml, ignore machine-local state)
+.loom/local.yml
+.loom/threads/
+.loom/backups/
+.loom/*.bak
+.loom/config.yml.bak
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+.next/
+.turbo/
+playwright-report/
+test-results/
+
+# Benchmark runtime artifacts (generated, never committed)
+runs/
+results/raw/
+workspaces/
+*.trace.zip
+screenshots/
+logs/
+
+# Agent tool output (generated, never committed)
+graphify-out/
+
+# Private held-out split (kept out of the public repo to limit contamination)
+tasks/heldout/
+data/arabizi/heldout/
+
+# Agent scratch space (research notes, spikes, word lists): never committed
+scratchpad/
+
+# Loom and Claude Code session state
+.loom/handoff.md
+.loom/.handoff-consumed
+.loom/.nudge-state
+.claude/worktrees/
+.worktrees/
+
+# Internal notes (kept locally; backed up in private repo kilmeh/kilmeh-internal)
+PLAYBOOK.md
+CLAUDE.local.md
+docs/offers/
+docs/superpowers/

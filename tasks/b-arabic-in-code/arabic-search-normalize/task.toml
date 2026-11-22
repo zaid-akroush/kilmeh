@@ -1,0 +1,32 @@
+schema_version = "1"
+id = "arabic-search-normalize"
+version = "0.1.2"
+track = "b-arabic-in-code"
+title = "Arabic-aware search and sort without over-normalizing"
+difficulty = "medium"
+split = "public"
+pair_id = "arabic-search-normalize"
+stack = ["python"]
+
+# en and levantine: AI drafts the board approved in chat 2026-11-21; the board sets review_status (see REVIEW.md). Short prompts; full requirements in fixture/SPEC.md.
+[prompts.en]
+file = "prompts/en.md"
+lang = "en"
+kind = "en"
+review_status = "draft"
+
+[prompts.levantine]
+file = "prompts/levantine.md"
+lang = "ar"
+kind = "dialect"
+dialect = "levantine"
+review_status = "draft"
+
+[grader]
+type = "tests"
+entry = "tests/test.sh"
+timeout_seconds = 120
+
+[solutions]
+reference = "solutions/reference"
+known_bad = "solutions/known-bad"

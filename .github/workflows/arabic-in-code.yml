@@ -1,0 +1,46 @@
+name: Arabic in code
+
+# Heavy job: runs only when Track B paths change (free Actions minutes).
+# jod-docker: the docker tests of jod-currency-format (real test.sh as root in the pinned Node
+# image, the Intl alternative, uid 65534 sweep). The host tests run in the main CI job.
+on:
+  pull_request:
+    paths:
+      - "tasks/b-arabic-in-code/**"
+      - "tests/test_b_*"
+      - "tests/b_*/**"
+      - "tests/b_helpers.py"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".github/workflows/arabic-in-code.yml"
+  push:
+    branches: [main]
+    paths:
+      - "tasks/b-arabic-in-code/**"
+      - "tests/test_b_*"
+      - "tests/b_*/**"
+      - "tests/b_helpers.py"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".github/workflows/arabic-in-code.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: arabic-in-code-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  jod-docker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          python-version: "3.12"
+      - run: uv sync --locked
+      - run: uv run pytest -m docker tests/test_b_jod.py

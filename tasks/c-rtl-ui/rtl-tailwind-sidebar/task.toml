@@ -1,0 +1,32 @@
+schema_version = "1"
+id = "rtl-tailwind-sidebar"
+version = "0.1.0"
+track = "c-rtl-ui"
+title = "Make a Tailwind dashboard work right-to-left with logical utilities"
+difficulty = "medium"
+split = "public"
+pair_id = "rtl-tailwind-sidebar"
+stack = ["html", "css", "tailwind"]
+
+# en is a short AI draft; the full requirements are in fixture/SPEC.md. levantine: AI draft approved by the board (native Jordanian speaker) 2026-11-21, see REVIEW.md.
+[prompts.en]
+file = "prompts/en.md"
+lang = "en"
+kind = "en"
+review_status = "draft"
+
+[prompts.levantine]
+file = "prompts/levantine.md"
+lang = "ar"
+kind = "dialect"
+dialect = "levantine"
+review_status = "native_reviewed"
+
+[grader]
+type = "rtl"
+entry = "tests/test.sh"
+timeout_seconds = 180
+
+[solutions]
+reference = "solutions/reference"
+known_bad = "solutions/known-bad"

@@ -1,0 +1,10 @@
+{
+  "name": "kilmeh-contribute-site",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "description": "Static site, no build step and no dependencies. This file only marks js/ as ES modules for node --test.",
+  "scripts": {
+    "test": "node --test tests/logic.test.js tests/api.test.js"
+  }
+}
