@@ -4,20 +4,18 @@
 
 Task version: 0.1.0. Process: see `tasks/REVIEW_PROCESS.md`.
 
-`review_status` in `task.toml` is set only by a native speaker, never by an agent. Nothing in this task has been reviewed by a native speaker yet.
+`review_status` in `task.toml` is set only by a native speaker, never by an agent. No second native speaker has checked this task yet.
 
 ## Variants
 
 | Variant | File | Kind | review_status (task.toml) |
 |---|---|---|---|
 | en | prompts/en.md | en | draft (AI-written) |
-| msa | prompts/msa.md | msa (Arabic script) | draft (placeholder) |
-| levantine | prompts/levantine.md | dialect (levantine, Arabic script) | draft (placeholder) |
-| arabizi | prompts/arabizi.md | dialect (levantine, Latin script) | draft (placeholder) |
+| levantine | prompts/levantine.md | dialect (levantine, Arabic script) | draft (AI draft, board-approved in chat 2026-11-21) |
 
-## Variants msa, levantine, arabizi
+## Variant: levantine
 
-Each file holds only a `TODO(board)` line. An agent never writes these prompts. The board writes each one with the same requirements as `prompts/en.md` (every input file and its encoding, every output file, no escapes, no BOM, names unchanged), then sets `review_status` and fills in the section below. `--strict` fails until then.
+Filled 2026-11-21: an AI draft that the board (native Jordanian speaker) approved unchanged in chat; hash pinned in `tests/`. `review_status` stays `draft` until the board sets it in the v1.1 review. Not exported or run in v1.0.
 
 - Author: (board, native speaker)
 - Reviewer: none yet

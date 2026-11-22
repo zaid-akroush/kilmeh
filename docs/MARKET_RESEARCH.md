@@ -4,7 +4,7 @@ Current as of 2026-11-22. Merged from five research passes (2026-11-10 to 2026-1
 
 ## 1. Summary
 
-- **What Kilmeh covers that nobody else does:** browser-graded right-to-left (RTL) UI tasks, mixed Arabic/English (bidi) text in generated UIs, dialect and Arabizi prompts written by a native speaker, and Arabic text kept byte-for-byte through agent edits. No other benchmark found tests coding agents on any of these.
+- **What Kilmeh covers that nobody else does:** browser-graded right-to-left (RTL) UI tasks, mixed Arabic/English (bidi) text in generated UIs, dialect and Arabizi prompts approved by a native speaker, and Arabic text kept byte-for-byte through agent edits. No other benchmark found tests coding agents on any of these.
 - **What is not new:** Arabic coding-agent tasks exist. LILT's Terminal-Bench-LILT has 30 closed Arabic tasks with a public leaderboard, and LILTBench has 7 open, runnable Arabic terminal tasks in MSA. Afandem measures dialect and Arabizi parity, but for service agents, not coding agents. Kilmeh does not claim to be the first Arabic agent benchmark or the first Arabic leaderboard.
 - **Existing Arabic code evaluations are function-level and translated** (3LM, QIMMA): no repo, no tools, no UI.
 - **Prompt language is the weakest claim.** LILT found that native-language instructions moved results by at most about 7 points in German, Hindi and Chinese. Arabic dialects and Arabizi were not tested. Kilmeh's first run (`results/v1-run-2026-11.md`) saw a gap for Arabizi on 4 tasks, which is too small to claim.

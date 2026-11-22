@@ -35,8 +35,8 @@ Every answer is checked by code, not by another AI. A task passes or fails, and 
 
 ## Status: v1.0
 
-- **19 tasks**: 4 on Arabic requests, 6 on Arabic text in code, 9 on right-to-left screens.
-- **Jordanian only.** The Arabic and Arabizi requests were written or approved by one native Jordanian speaker. Some prompts are still marked `draft`; a full native review comes in v1.1.
+- **19 tasks**: 4 on Arabic requests, 6 on Arabic text in code, 9 on right-to-left screens. The v1.0 run used 16; the 3 newest (mixed Arabic and English text) came after it.
+- **Jordanian only.** One native Jordanian speaker wrote the Arabic and Arabizi requests for one task, and approved AI drafts unchanged for the rest. Some prompts are still marked `draft`; a full native review comes in v1.1.
 - **First results**: Claude Code and Codex, run on a small free model on one laptop. Read them in [`results/v1-run-2026-11.md`](results/v1-run-2026-11.md). These results show the benchmark works. They do not say how the best paid AI models score.
 - **Interesting early sign**: requests in Arabizi passed much less often (6 of 24 tries) than the same requests in English (20 of 24). The sample is too small to call it a finding yet.
 
@@ -55,7 +55,7 @@ Tasks run in [Harbor](https://docs.harborframework.com), a common tool for testi
 
 ## Why it matters
 
-Other Arabic AI tests check knowledge or short code snippets. Other coding-agent tests change the programming language, not the human language. Nobody else tests agents on right-to-left screens, Jordanian and Arabizi requests, or keeping Arabic text safe during edits. Sources: [`docs/MARKET_RESEARCH.md`](docs/MARKET_RESEARCH.md).
+Other Arabic AI tests check knowledge or short code snippets. Other coding-agent tests change the programming language, not the human language. We found no other benchmark that tests agents on right-to-left screens, Jordanian and Arabizi requests, or keeping Arabic text safe during edits. Sources: [`docs/MARKET_RESEARCH.md`](docs/MARKET_RESEARCH.md).
 
 ## Help with words
 

@@ -13,7 +13,7 @@ Task version: 0.1.0. Process: see `tasks/REVIEW_PROCESS.md`.
 
 ## Variant: levantine
 
-The file holds only `TODO(board): native Jordanian prompt, see REVIEW.md`. An agent never writes this prompt. The board writes it in Jordanian (Levantine) Arabic with the same requirements as `prompts/en.md`, then sets `review_status` and fills in the section below. `--strict` fails until then.
+Filled 2026-11-21: an AI draft that the board (native Jordanian speaker) approved unchanged; hash pinned in `tests/`. Not yet checked by a second native speaker.
 
 - Requirements to carry over (all are graded): an Arabic `lang` (`ar` or `ar-JO`) and right-to-left on `<html>`; the sidebar at the right edge, the main content entirely to its left, the sidebar visible and about 16rem wide, nothing hidden, clipped, shrunk or scaled; the layout follows `<html dir>` alone and uses Tailwind logical utilities, with no physical utility even behind `rtl:` or `ltr:`, and no physical CSS property anywhere in the compiled CSS (`@apply`, arbitrary values, hand-written rules and `@import`ed styles included, checked by `no_physical_css` on the built CSS); no sideways scrolling at 360 px; all styling from Tailwind classes and `src/input.css`, the page linking only `dist/app.css` (no `<style>`, no `style` attribute, no other stylesheet, no `<script>`), and `dist/` is rebuilt by the grader so editing it has no effect; every `data-testid` element kept, visible, with its Arabic text unchanged.
 - Author: (board, native Jordanian speaker)

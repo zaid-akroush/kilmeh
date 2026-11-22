@@ -11,11 +11,13 @@ Task version: 0.1.2. Process: see `tasks/REVIEW_PROCESS.md`.
 | Variant | File | Kind | review_status (task.toml) |
 |---|---|---|---|
 | en | prompts/en.md | en | draft |
-| msa | prompts/msa.md | msa | draft |
+| levantine | prompts/levantine.md | dialect (levantine, Arabic script) | draft (AI draft, board-approved in chat 2026-11-21) |
 
 Add a section below for every new variant (dialect, code-switched, Arabizi).
 
-## Variant: msa
+## Variant: levantine
+
+Filled 2026-11-21: an AI draft that the board (native Jordanian speaker) approved unchanged in chat; hash pinned in `tests/`. `review_status` stays `draft` until the board sets it in the v1.1 review. Not exported or run in v1.0.
 
 - Author:
 - Reviewer:

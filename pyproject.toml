@@ -1,6 +1,6 @@
 [project]
 name = "kilmeh"
-version = "0.0.0"
+version = "1.0.0"
 description = "Open benchmark for coding agents on Arabic prompts, Arabic text in code, and RTL UI."
 readme = "README.md"
 requires-python = ">=3.12"

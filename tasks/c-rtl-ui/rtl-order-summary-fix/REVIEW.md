@@ -13,7 +13,7 @@ Task version: 0.1.0. Process: see `tasks/REVIEW_PROCESS.md`.
 
 ## Variant: levantine
 
-The file holds only `TODO(board): native Jordanian prompt, see REVIEW.md`. An agent never writes this prompt. The board writes it in Jordanian (Levantine) Arabic with the same requirements as `prompts/en.md`, then sets `review_status` and fills in the section below. `--strict` fails until then.
+Filled 2026-11-21: an AI draft that the board (native Jordanian speaker) approved unchanged; hash pinned in `tests/`. Not yet checked by a second native speaker.
 
 - Requirement to carry over: the order summary table itself must fit a 360 px screen with no horizontal scrolling of the table or the page, and must not be shrunk with `transform` or `zoom` (the `table_fits` check is strict; `prompts/en.md` says so).
 - Author: (board, native Jordanian speaker)

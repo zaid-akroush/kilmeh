@@ -14,7 +14,7 @@ Task version: 0.1.0. Process: see `tasks/REVIEW_PROCESS.md`.
 
 ## Variant: levantine
 
-The file holds only `TODO(board): native Jordanian prompt, see REVIEW.md`. An agent never writes this prompt. The board writes it in Jordanian (Levantine) Arabic with the same requirements as `prompts/en.md`, then sets `review_status` and fills in the section below. `--strict` fails until then. When the prompt is written, pin its hash in `tests/test_a_skeletons.py`.
+Filled 2026-11-21: an AI draft that the board (native Jordanian speaker) approved unchanged; hash pinned in `tests/`. Not yet checked by a second native speaker.
 
 - Author: (board, native Jordanian speaker)
 - Reviewer: none yet
@@ -33,7 +33,7 @@ Checklist:
 
 ## Variant: arabizi_levantine
 
-The file holds only `TODO(board): native Arabizi prompt (Latin letters), see REVIEW.md`. An agent never writes Arabizi. The board writes it, then sets `review_status` and fills in the section below.
+Filled 2026-11-21: an AI draft that the board (native Jordanian speaker) approved unchanged; hash pinned in `tests/`. Not yet checked by a second native speaker.
 
 - Author: (board, native Jordanian speaker)
 - Reviewer: none yet

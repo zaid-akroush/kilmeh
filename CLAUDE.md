@@ -7,7 +7,7 @@ Kilmeh (كلمة, "word") is an open benchmark for coding agents on Arabic promp
 - **Work from `docs/ROADMAP.md`.** Take the first unchecked milestone unless told otherwise. Tick items only when the acceptance criteria are verifiably met.
 - **Deterministic grading first.** Prefer tests and DOM/computed-style assertions over LLM or VLM judges. A judge may supplement, never replace.
 - **Every task needs a reference solution that passes and a known-bad solution that fails.** No task merges without both.
-- **Never machine-translate dialect tasks alone.** Flag them for native-speaker review in the review log. The same goes for Arabizi (Arabic in Latin letters): agents never write final Arabic or Arabizi prompt text. A native speaker writes it; agents insert it byte-for-byte and pin its hash in `tests/`. Process: `tasks/REVIEW_PROCESS.md`.
+- **Never machine-translate dialect tasks alone.** Flag them for native-speaker review in the review log. The same goes for Arabizi (Arabic in Latin letters): agents never write final Arabic or Arabizi prompt text. A native speaker writes it; agents insert it byte-for-byte and pin its hash in `tests/`. (v1.0 exception: most Arabic prompts are AI drafts the native speaker approved unchanged; see `docs/DATASET_CARD.md`, Review process.) Process: `tasks/REVIEW_PROCESS.md`.
 - **Tasks follow `tasks/SCHEMA.md`** and must pass `uv run kilmeh validate-tasks tasks`. Each task's grader gets its own tests, with one test per check.
 - **Preserve Arabic text byte-for-byte.** Don't normalize, transliterate or reorder Arabic in files unless the task requires it. Use UTF-8, no BOM, and keep bidi control characters intact.
 - **No secrets in the repo.** API keys come from the environment. `.env*` is git-ignored.

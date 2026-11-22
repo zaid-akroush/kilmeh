@@ -53,7 +53,7 @@ Each task has at least one English prompt and at least one Arabic-script prompt 
 
 - **Dialects:** the schema allows `levantine`, `gulf`, `egyptian`, `maghrebi`, `iraqi`, `sudanese`, `other`. Every dialect prompt today is `levantine` (Jordanian).
 - **Arabizi** (Arabic typed in Latin letters and digits) is not a separate kind. It is a dialect prompt with `script = "latin"`. A task may carry several Arabizi spellings under one `pair_id`. Arabizi has no standard spelling. Kilmeh keeps the native author's natural typing on purpose (board, 2026-11-22), for example `3'` for غ and `6` for ط, because that is how real users type. Kilmeh does not clean it to one house style. A spelling that changes results is a finding, not noise to remove.
-- **Current prompt state (2026-11-22):** Track A has 4 tasks, each with English, Jordanian and Jordanian Arabizi prompts written or approved by the board. Tracks B and C have short English and Jordanian prompts, with full requirements in each task's `fixture/SPEC.md`. The board is reviewing every prompt in chat; prompts still marked `draft` are not exported. No MSA prompts ship in v1.0.
+- **Current prompt state (2026-11-22):** Track A has 4 tasks, each with English, Jordanian and Jordanian Arabizi prompts. Tracks B and C have short English and Jordanian prompts, with full requirements in each task's `fixture/SPEC.md`. The board is reviewing every prompt in chat; prompts still marked `draft` are not exported. No MSA prompts ship in v1.0.
 
 ## Data fields
 
@@ -82,14 +82,14 @@ Not on Hugging Face yet. When it is, the layout follows `kilmeh export-harbor`: 
 
 ## How tasks are made
 
-- **Native speakers write the Arabic.** Final Arabic and Arabizi prompt text is written by a native speaker. Agents never write it; they insert it byte-for-byte and pin its hash in `tests/`. Dialect and Arabizi prompts are never machine-translated.
+- **Native speakers write the Arabic.** Final Arabic and Arabizi prompt text is written or approved by a native speaker (v1.0 details under Review process). Agents never make it final on their own; they insert it byte-for-byte and pin its hash in `tests/`. Dialect and Arabizi prompts are never machine-translated.
 - **Reference and known-bad.** Every task ships a reference solution that must pass and a known-bad solution that must fail. `uv run kilmeh selftest` proves reference = 1, known-bad = 0 and untouched fixture = 0, and CI runs it on every change.
 - **Deterministic graders.** Pass or fail comes from tests, byte checks, and DOM or computed-style checks in headless Chromium. No LLM or VLM judge decides a score. Each grader check has its own test.
 - **Hermetic.** Each task runs in its own container. The self-test and the RTL graders run with no network access, while agent runs need network to reach the model.
 
 ## Review process
 
-Every prompt variant carries a `review_status`. A variant starts as `draft`, becomes `native_authored` when a native speaker wrote it, and `native_reviewed` after a second native speaker checks it. Each change is logged in the task's `REVIEW.md`. Releases require `uv run kilmeh validate-tasks --strict tasks`, which rejects every draft. **v1.0 exception (maintainer decision, 2026-11-22):** v1.0 ships before the full native review, so it does not pass `--strict`. Prompts still marked `draft` stay labelled `draft`. `kilmeh export-harbor` skips draft Arabic prompts, so no draft Arabic text was run in v1.0. `--strict` is required from v1.1. Details: [`tasks/REVIEW_PROCESS.md`](../tasks/REVIEW_PROCESS.md).
+Every prompt variant carries a `review_status`. A variant starts as `draft`, becomes `native_authored` when a native speaker wrote it, and `native_reviewed` after a second native speaker checks it. **v1.0 note:** In v1.0, the Jordanian and Arabizi prompts of `loop-for-to-while` were written by the native speaker. All other Arabic and Arabizi prompts were drafted by an AI and approved unchanged by that one native speaker; no second native speaker has checked them yet. Those approved drafts carry `native_reviewed` in v1.0 (Track A and Track C Jordanian prompts). Read the label as "approved by one native speaker" until the v1.1 review. Each change is logged in the task's `REVIEW.md`. Releases require `uv run kilmeh validate-tasks --strict tasks`, which rejects every draft. **v1.0 exception (maintainer decision, 2026-11-22):** v1.0 ships before the full native review, so it does not pass `--strict`. Prompts still marked `draft` stay labelled `draft`. `kilmeh export-harbor` skips draft Arabic prompts, so no draft Arabic text was run in v1.0. `--strict` is required from v1.1. Details: [`tasks/REVIEW_PROCESS.md`](../tasks/REVIEW_PROCESS.md).
 
 ## Licensing
 
